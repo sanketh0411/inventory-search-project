@@ -1,0 +1,9 @@
+[
+  { "id": 1, "productName": "Ergonomic Chair", "category": "Furniture", "price": 199.99 },
+  { "id": 2, "productName": "Office Desk", "category": "Furniture", "price": 299.99 },
+  { "id": 3, "productName": "Wireless Mouse", "category": "Electronics", "price": 25.50 },
+  { "id": 4, "productName": "Keyboard", "category": "Electronics", "price": 45.00 },
+  { "id": 5, "productName": "LED Monitor", "category": "Electronics", "price": 150.00 },
+  { "id": 6, "productName": "Notebook", "category": "Stationery", "price": 5.00 },
+  { "id": 7, "productName": "Pen Pack", "category": "Stationery", "price": 10.00 }
+]
