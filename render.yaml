@@ -1,0 +1,18 @@
+services:
+  # 🔙 Backend (Node.js API)
+  - type: web
+    name: inventory-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node index.js
+
+  # 🔜 Frontend (React App)
+  - type: web
+    name: inventory-frontend
+    env: static
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: build

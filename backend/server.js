@@ -3,7 +3,15 @@ const cors = require("cors");
 const inventory = require("./data/inventory.json");
 
 const app = express();
+
+// ✅ Middleware
 app.use(cors());
+app.use(express.json());
+
+// ✅ Root route (for testing in browser)
+app.get("/", (req, res) => {
+  res.send("Inventory Search API is running 🚀");
+});
 
 // 🔍 SEARCH API
 app.get("/search", (req, res) => {
@@ -44,7 +52,9 @@ app.get("/search", (req, res) => {
   res.json(filtered);
 });
 
-// 🚀 Start server
-app.listen(5000, () => {
-  console.log("Server running on http://localhost:5000");
+// 🚀 Start server (Render compatible)
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
